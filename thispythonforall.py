@@ -72,8 +72,8 @@ def display(url_name):
 		id = r[0]
 		url_name = r[1]#1
 		name = r[2]#2
-		email = r[3]#3
-		website  = r[4]#4
+		email = r[3]#3 #
+		website  = r[4]#4 #
 		phone = r[5]#5
 		job  = r[6]#6
 		photo = r[7]#7

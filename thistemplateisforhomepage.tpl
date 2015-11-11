@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Je suis</title>
+		<title>Je suis(I am) {{name}}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
@@ -19,37 +19,36 @@
 				<!-- Main -->
 					<section id="main">
 						<header>
-							<span class="avatar"><img src="jesuis" alt="" /></span>
-							<h1>Je Suis</h1>
-							<p>Your social visiting card!</p>
+							<span class="avatar"><img src="{{photo}}" alt="" /></span>
+							<h1>{{name}}</h1>
+							<p>{{job}}</p>
 						</header>
-						<hr />
-						<h2>Want to create yours?</h2>
-						<form method="post" action="#">
-							<ul class="actions">
-								<li><a href="create" class="button">Get Started!</a></li>
-							</ul>
-						</form>
-						<hr />
-						<h2>See a demo</h2>
-						<form method="post" action="#">
-							<ul class="actions">
-								<li><a href="anivarth" class="button">Demo</a></li>
-							</ul>
-						</form>
-						<hr />
-						<h2>Want to help?</h2>
-						<form method="post" action="#">
-							<ul class="actions">
-								<li><a href="create" class="button">Contribute!</a></li>
-							</ul>
-						</form>
 						<hr />
 						<footer>
 							<ul class="icons">
-								<li><a href="https://twitter.com/anivarthpvn" class="fa-twitter" target="_blank">Twitter</a></li>
-								<li><a href="mailto:anivarth@gmail.com" class="fa-envelope-o" target="_blank">Email</a></li>
-								<li><a href="http://facebook.com/anivarth.peesapati" class="fa-facebook" target="_blank">Facebook</a></li>
+								%if facebook and count!=3
+									<li><a href="{{facebook}}" class="fa-facebook" target="_blank">Facebook</a></li>
+								%end
+								%if twitter and count!=3
+								<li><a href="{{twitter}}" class="fa-twitter" target="_blank">Twitter</a></li>
+								%end
+								%if email and count!=3
+								<li><a href="mailto:{{email}}" class=" fa-envelope-o" target="_blank">Mail</a></li>
+								%end
+								%if website and count!=3
+								<li><a href="{{website}}" class="fa-globe" target="_blank">My Website</a></li>
+								%end
+								%if linkedin and count!=3
+								<li><a href="{{linkedin}}" class="fa-linkedin" target="_blank">Linked In</a></li>
+								%end
+								%if instagram and count!=3
+								<li><a href="{{instagram}}" class="fa-instagram" target="_blank">Instagram</a></li>
+								%end
+								%if coun! = 3
+									%for i in range(count,3):
+										<li><a href="http://jesuis.pythonanywhere.com" class="fa-globe" target="_blank">Je Suis</a></li>
+									%end
+								%end
 							</ul>
 						</footer>
 					</section>
