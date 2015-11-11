@@ -61,7 +61,7 @@ def bg():
 #all urls from here
 @route('/<url_name>')
 def display(url_name):
-	conn = sqlite.connect('/home/jesuis/jesuis/atad/database.db')
+	conn = sqlite.connect('/home/jesuis/jesuis/atad/esabatad.db')
 	c = conn.cursor()
 	c.execute('SELECT * FROM user WHERE url_name = ?',(url_name,))
 	r = c.fetchone()
